@@ -1,0 +1,41 @@
+*{
+    padding: 0%;
+    margin: 0%;
+    box-sizing: border-box;
+}
+
+.Search{
+    height:6vh;
+    width: 100vw;
+    border: 2px solid salmon;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.SearchBar{
+    height:80%;
+    width: 80%;
+    border: 2px solid salmon;
+    display: flex;
+    justify-content: space-between;
+}
+
+input{
+    height: 100%;
+    width: 85%;
+    padding-left: 3%;
+    border: none;
+    outline: none;
+}
+
+input:focus{
+    border: none;
+    outline: none;
+}
+
+.SearchBtn{
+    height: 98%;
+    width: 15%;
+    border:1px solid red;
+}
