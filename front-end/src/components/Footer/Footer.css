@@ -1,0 +1,15 @@
+*{
+    padding: 0%;
+    margin: 0%;
+    box-sizing: border-box;
+}
+
+.Footer{
+    height:8vh;
+    width: 100vw;
+    border: 2px solid black;
+    position: absolute;
+    bottom: 0;
+    padding-bottom: 1%;
+    background-color: rgb(94, 94, 94);
+}

@@ -8,6 +8,7 @@
     height:6vh;
     width: 100vw;
     border: 2px solid salmon;
+    background-color: rgb(230, 104, 104);
     display: flex;
     justify-content: center;
     align-items: center;
