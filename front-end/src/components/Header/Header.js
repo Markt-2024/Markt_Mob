@@ -1,4 +1,5 @@
 import './Header.css'
+
 export default function Header() {
     return(
         <div className='Header'>
@@ -7,11 +8,13 @@ export default function Header() {
             <h1>Markt</h1>
         </div>
 
+        
         <div className='profile'>
             <div className='pic'>
-
+            Profile
             </div>
         </div>
+
 
         </div>
     )
