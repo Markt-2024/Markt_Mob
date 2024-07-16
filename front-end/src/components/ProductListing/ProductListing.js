@@ -5,14 +5,14 @@ import './ProductListing.css';
 const ProductListing = () => {
     const products = [
         {
-          image: testImage,
+          image: 'https://ralfvanveen.com/wp-content/uploads/2021/06/Placeholder-_-Glossary-1200x675.webp',
           name: 'Handcrafted Ceramic Vase',
           description: 'A beautiful, one-of-a-kind ceramic vase made by a local artist.',
           price: '$45.99',
           seller: '+1234567890',
         },
         {
-          image: testImage,
+          image: 'https://ralfvanveen.com/wp-content/uploads/2021/06/Placeholder-_-Glossary-1200x675.webp',
           name: 'Vintage Leather Satchel',
           description: 'A timeless, high-quality leather satchel perfect for everyday use.',
           price: '$89.99',

@@ -9,10 +9,15 @@ import { BrowserRouter as Router,Routes , Route} from 'react-router-dom';
 function App() {
   return (
     <Router>
+      <Header />
     <Routes>
-      <Route path="/" element={<Header />} />
-      <Route path="/" element={<Search />} />
-      <Route path="/" element={<ProductListing />} />
+    <Route path="/" element={
+          <>
+            <Search />
+            <ProductListing />
+            {/* Include Footer here if it should be part of the main layout */}
+          </>
+        } />
       <Route path="/login" element={<Login />} />
       <Route path="/register" element={<Register />} />
       {/* <Route path="/" element={<Footer />} /> */}
