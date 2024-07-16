@@ -2,11 +2,24 @@ import React, { useEffect } from "react";
 import { Form, Input, Button, Radio, message } from "antd";
 import { Link, useNavigate } from "react-router-dom";
 import './Register.css';
+import { RegisterUser } from "../../calls/users";
 
 function Register() {
+
+  const navigate = useNavigate()
   const onFinish = async (values) => {
     console.log(values);
-   
+    try {
+      const response = await RegisterUser(values);
+      if (response.success) {
+        message.success(response.message);
+        navigate('/login')
+      } else {
+        message.error(response.message);
+      }
+    } catch (error) {
+      message.error(error.message);
+    }
   };
 
   return (
@@ -70,13 +83,16 @@ function Register() {
                 </Button>
               </Form.Item>
               <Form.Item
-                label="Register as a Partner"
+                // label="Register as a Partner"
                 htmlFor="role"
                 name="role"
                 className="d-block text-center"
-                initialValue={false}
+                initialValue="user" // Set the default role to "user"
                 rules={[{ required: true, message: "Please select an option!" }]}
               >
+                {/* Assuming you're using a Radio.Group or Select for role selection.
+      Make sure to include the component here, e.g., Radio.Group or Select,
+      with options for "user" and any other roles you support. */}
               </Form.Item>
             </Form>
             <div>
