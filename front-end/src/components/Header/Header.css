@@ -2,6 +2,7 @@
     padding: 0%;
     margin: 0%;
     box-sizing: border-box;
+    color: aliceblue;
 }
 
 .Header{
@@ -17,27 +18,32 @@
 }
 
 .Markt-logo{
+    color: black;
     height: 75%;
     width: 40%;
-    border: 2px solid blue;
+    margin-top: 2%;
+    /* border: 2px solid blue; */
     display: flex;
     justify-content: center;
     align-items: center;
-    font-size: 160%;
+    font-size: 3vh;
+}
+h1{
+    color: black;
 }
 
 .profile{
     height: 75%;
     width: 15%;
-    border: 2px solid blue;
+    border: 2px solid rgb(0, 0, 0);
     display: flex;
     justify-content: center;
     align-items: center;
 }
-.pic{
+/* .pic{
     height: 90%;
     width: 75%;
     border-radius: 50%;
     border: 1px solid black;
     background-color: aqua;
-}
+} */

@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react'
 import { Button, Form, Input } from "antd";
-// import { Link , useNavigate } from "react-router-dom";
+import { Link , useNavigate } from "react-router-dom";
 import './Login.css'
 import {message} from 'antd'
 
@@ -18,7 +18,7 @@ function Login() {
     <header className="App-header">
       <main className="main-area mw-500 text-center px-3">
         <section className="left-section">
-          <h1>Login to BookMyShow</h1>
+          <h1>Login</h1>
         </section>
 
         <section className="right-section">
@@ -66,7 +66,7 @@ function Login() {
           </Form>
           <div>
             <p>
-              {/* New User? <Link to="/register">Register Here</Link> */}
+              New User? <Link to="/register">Register Here</Link>
             </p>
           </div>
         </section>

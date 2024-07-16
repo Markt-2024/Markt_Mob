@@ -16,7 +16,7 @@ function Register() {
       <header className="App-header">
         <main className="main-area mw-500 text-center px-3">
           <section className="left-section">
-            <h1>Register to BookMyShow</h1>
+            <h1>Register to Markt</h1>
           </section>
           <section className="right-section">
             <Form layout="vertical" onFinish={onFinish}>
@@ -79,20 +79,11 @@ function Register() {
                 initialValue={false}
                 rules={[{ required: true, message: "Please select an option!" }]}
               >
-                <div className="d-flex justify-content-start">
-                  <Radio.Group
-                    name="radiogroup"
-                    className="flex-start"
-                  >
-                    <Radio value={'partner'}>Yes</Radio>
-                    <Radio value={'user'}>No</Radio>
-                  </Radio.Group>
-                </div>
               </Form.Item>
             </Form>
             <div>
               <p>
-                {/* Already a user? <Link to="/login">Login now</Link> */}
+                Already a user? <Link to="/login">Login now</Link>
               </p>
             </div>
           </section>
