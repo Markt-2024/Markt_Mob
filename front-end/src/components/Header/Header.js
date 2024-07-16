@@ -9,7 +9,7 @@ export default function Header() {
 
       <div className="profile">
         <div className="pic">
-        <Link to="/login">Login</Link>
+        <Link to="/login" className="login-btn">Login</Link>
         </div>
       </div>
     </div>
