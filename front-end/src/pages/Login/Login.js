@@ -66,7 +66,7 @@ function Login() {
           </Form>
           <div>
             <p>
-              New User? <Link to="/register">Register Here</Link>
+              New User? <Link to="/register" className='link'>Register Here</Link>
             </p>
           </div>
         </section>

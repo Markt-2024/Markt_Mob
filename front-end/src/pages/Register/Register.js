@@ -9,8 +9,6 @@ function Register() {
    
   };
 
-
-
   return (
     <>
       <header className="App-header">
@@ -83,7 +81,7 @@ function Register() {
             </Form>
             <div>
               <p>
-                Already a user? <Link to="/login">Login now</Link>
+                Already a user? <Link to="/login" className="link">Login now</Link>
               </p>
             </div>
           </section>
