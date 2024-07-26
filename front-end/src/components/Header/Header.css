@@ -51,3 +51,60 @@ h1{
 .login-btn{
     text-decoration: none;
 }
+
+
+/* CustomHeader.css */
+.custom-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 20px;
+}
+
+.logo h1 {
+  color: white;
+  margin: 0;
+}
+
+.menu-section {
+  display: flex;
+  align-items: center;
+}
+
+.mobile-menu-button {
+  display: none;
+}
+
+@media (max-width: 768px) {
+  .custom-header {
+    flex-wrap: wrap;
+  }
+
+  .logo {
+    flex-basis: 100%;
+    text-align: center;
+    margin-bottom: 10px;
+  }
+
+  .menu-section {
+    flex-basis: 100%;
+    justify-content: space-between;
+  }
+
+  .desktop-menu {
+    display: none;
+  }
+
+  .mobile-menu-button {
+    display: block;
+  }
+
+  .mobile-menu {
+    position: absolute;
+    top: 64px;
+    left: 0;
+    right: 0;
+    background-color: #001529;
+    z-index: 1;
+  }
+}
