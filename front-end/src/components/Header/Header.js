@@ -40,7 +40,7 @@ export default function CustomHeader() {
       </div>
       <Menu theme="dark" mode="horizontal" defaultSelectedKeys={['1']}>
         <Menu.Item key="1" onClick={() => navigate('/')}>Home</Menu.Item>
-        <Menu.Item key="2" onClick={() => navigate('/products')}>Products</Menu.Item>
+        <Menu.Item key="2" onClick={() => navigate('/post')}>Post</Menu.Item>
         <Menu.Item key="3" onClick={() => navigate('/about')}>About</Menu.Item>
       </Menu>
       {isLoggedIn ? (

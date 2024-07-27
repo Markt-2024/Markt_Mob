@@ -10,22 +10,13 @@ const app = express()
 const userRoutes = require('./routes/userRoutes')
 
 
-const corsOptions = {
-    origin: 'http://localhost:3000',
-    optionsSuccessStatus: 200 
-  };
 
-
-app.use(cors(corsOptions))
+app.use(cors())
 app.use(express.json())
 app.use('/api/users' , userRoutes)
 
 
-
 const PORT = 8083
-
-
-
 
 app.listen(PORT , ()=>{
     console.log("server running")
