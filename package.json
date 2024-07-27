@@ -1,0 +1,15 @@
+{
+    "name": "Markt_Mob",
+    "version": "1.0.0",
+    "description": "",
+    "main": "index.js",
+    "scripts": {
+        "markt": "cd backend && npm install bcrypt nodemon cors express jsonwebtoken dotenv && cd ../frontend && npm install",
+        "start": "npm install concurrently && concurrently \"cd backend && npm run dev\" \"cd frontend && npm start\""
+    },
+    "author": "",
+    "license": "ISC",
+    "devDependencies": {
+        "concurrently": "^8.2.2"
+    }
+}
