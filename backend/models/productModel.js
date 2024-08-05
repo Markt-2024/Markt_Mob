@@ -1,6 +1,7 @@
 const mongoose = require('mongoose');
 
 const ProductSchema = new mongoose.Schema({
+
   title: {
     type: String,
     required: true,
@@ -21,6 +22,10 @@ const ProductSchema = new mongoose.Schema({
   contact: {
     type: String,
     required: true,
+  },
+  approved: {
+    type: Boolean,
+    default: false,
   },
 });
 

@@ -9,13 +9,15 @@ const app = express()
 
 const userRoutes = require('./routes/userRoutes')
 const productRoutes = require('./routes/productRoutes')
+const adminRoutes = require('./routes/adminRoutes')
 
 
 
 app.use(cors())
 app.use(express.json())
-app.use('/api/users' , userRoutes)
+app.use('/api/users' , userRoutes)  
 app.use('/product' , productRoutes)
+app.use('/admin' , adminRoutes)
 
 
 const PORT = 8083

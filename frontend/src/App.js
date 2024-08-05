@@ -9,6 +9,7 @@ import Home from './pages/Home/Home';
 import { AuthProvider } from './components/authentication/AuthContext.js';
 import { useEffect, useState } from 'react';
 import Post from './pages/Post/Post.js';
+import AdminHome from './pages/AdminHome/AdminHome.js';
 
 
 function App() {
@@ -42,6 +43,7 @@ function App() {
           <Route path="/register" element={<Register />} />
           <Route path="/post" element={<Post/>} />
           <Route path="/product/:id" element={<ProductDetails products={products} />} />
+          <Route path="/admin" element={<AdminHome/>} />
         </Routes>
       </Router>
     </AuthProvider>

@@ -1,0 +1,44 @@
+.approve{
+    height: 8%;
+    width: 40%;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    cursor: pointer;
+    padding: 5px 10px;
+    margin: 5px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 6px;
+    border-radius: 5px;
+}
+
+.approve:hover {
+    background-color: #00ff0d;
+    transform: scale(1.01);
+    transition: 0.3s ease-out;
+}
+
+.reject{
+    height: 8%;
+    width: 40%;
+    background-color: #f14f43;
+    color: white;
+    border: none;
+    cursor: pointer;
+    padding: 5px 10px;
+    margin: 5px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 6px;
+    border-radius: 5px;
+}
+
+.reject:hover {
+    background-color: #ff1100;
+    transform: scale(1.01);
+    transition: 0.3s ease-out;
+}
+

@@ -28,7 +28,7 @@ router.post('/post', async (req, res) => {
 router.get('/all', async (req, res) => {
   try {
     console.log('Fetching all products...');
-    const products = await Product.find({});
+    const products = await Product.find({approved: true});
     console.log('Products retrieved:', products);
     res.json(products);
   } catch (err) {
