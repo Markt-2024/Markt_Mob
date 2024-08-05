@@ -9,11 +9,10 @@ const { Header } = Layout;
 
 export default function CustomHeader() {
   const navigate = useNavigate();
-  const { isLoggedIn, setIsLoggedIn } = useAuth();
+  const { isLoggedIn, logout } = useAuth();
 
   const handleLogout = () => {
-    localStorage.removeItem('token');
-    setIsLoggedIn(false);
+    logout();
     navigate('/');
   };
 

@@ -10,6 +10,7 @@ import { AuthProvider } from './components/authentication/AuthContext.js';
 import { useEffect, useState } from 'react';
 import Post from './pages/Post/Post.js';
 import AdminHome from './pages/AdminHome/AdminHome.js';
+import MyPosts  from './pages/MyPosts/MyPosts.js';
 
 
 function App() {
@@ -44,6 +45,7 @@ function App() {
           <Route path="/post" element={<Post/>} />
           <Route path="/product/:id" element={<ProductDetails products={products} />} />
           <Route path="/admin" element={<AdminHome/>} />
+          <Route path="/my-posts" element={<MyPosts/>} />
         </Routes>
       </Router>
     </AuthProvider>

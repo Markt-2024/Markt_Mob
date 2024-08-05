@@ -11,13 +11,15 @@ function Post() {
 
   async function registerUser(e) {
     e.preventDefault();
+    const userId = localStorage.getItem('userId');
     try {
       const response = await fetch('http://localhost:8083/product/post', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
+          'Authorization': `Bearer ${localStorage.getItem('token')}`,
         },
-        body: JSON.stringify({ title, image, description, price, contact }),
+        body: JSON.stringify({ title, image, description, price, contact, userId}),
       });
 
       if (!response.ok) {

@@ -7,7 +7,7 @@ import { useAuth } from '../../components/authentication/AuthContext.js';
 
 function Login() {
   const navigate = useNavigate()
-  const { setIsLoggedIn } = useAuth(); // Use the AuthContext
+  const { login } = useAuth(); 
 
   const onFinish = async (values) => {
     console.log(values)
@@ -15,8 +15,8 @@ function Login() {
       const response = await LoginUser(values);
       if(response.success){
         message.success(response.message)
-        localStorage.setItem('token', response.token)
-        setIsLoggedIn(true); 
+        login(response.token)
+        localStorage.setItem('userId', response.userId)
         navigate('/')
       } else {
         message.error(response.message)

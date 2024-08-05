@@ -1,7 +1,6 @@
 const mongoose = require('mongoose');
 
 const ProductSchema = new mongoose.Schema({
-
   title: {
     type: String,
     required: true,
@@ -26,6 +25,11 @@ const ProductSchema = new mongoose.Schema({
   approved: {
     type: Boolean,
     default: false,
+  },
+  userId: {
+    type: mongoose.Schema.Types.ObjectId,
+    ref: 'User',
+    required: true,
   },
 });
 
