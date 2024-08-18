@@ -19,12 +19,11 @@ const ProductDetails = () => {
         console.error(error);
       }
     };
-
     fetchProduct();
   }, [id]);
 
   if (!product) {
-    return <div className="product-details-page product-not-found">Product not found</div>;
+    return <div className="product-details-page product-not-found"></div>;
   }
 
   return (

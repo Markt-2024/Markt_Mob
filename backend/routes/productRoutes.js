@@ -27,8 +27,8 @@ router.post('/post', async (req, res) => {
 
 router.get('/all', async (req, res) => {
   try {
-    console.log('Fetching all products...');
-    const products = await Product.find({approved: true});
+    console.log('Fetching all approved and available products...');
+    const products = await Product.find({ approved: true , isSold: false });
     console.log('Products retrieved:', products);
     res.json(products);
   } catch (err) {
@@ -36,6 +36,7 @@ router.get('/all', async (req, res) => {
     res.status(500).json({ error: 'Server error' });
   }
 });
+
 
 router.get('/my-posts', async (req, res) => {
   try {
@@ -47,6 +48,7 @@ router.get('/my-posts', async (req, res) => {
     res.status(500).json({ error: 'Server error' });
   }
 });
+
 
 router.get('/:id', async (req, res) => {
   try {
@@ -61,6 +63,27 @@ router.get('/:id', async (req, res) => {
   }
 }
 );
+
+router.patch('/mark-as-sold/:productId', async (req, res) => {
+  try {
+    const productId = req.params.productId;
+    
+    const product = await Product.findById(productId);
+    
+    if (!product) {
+      return res.status(404).json({ message: 'Product not found' });
+    }
+    
+    product.isSold = true;
+    await product.save();
+    
+    res.json({ message: 'Product marked as sold', product });
+  } catch (error) {
+    console.error('Error marking product as sold:', error);
+    res.status(500).json({ message: 'Server error', error: error.message });
+  }
+});
+
 
 
 

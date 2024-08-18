@@ -1,4 +1,7 @@
 import React, { useState } from 'react';
+import { useNavigate } from "react-router-dom";
+import { message } from "antd";
+
 import './Post.css';
 
 function Post() {
@@ -7,11 +10,18 @@ function Post() {
   const [description, setDescription] = useState('');
   const [price, setPrice] = useState('');
   const [contact, setContact] = useState('');
-  const [message, setMessage] = useState('');
+  const navigate = useNavigate();
 
   async function registerUser(e) {
     e.preventDefault();
     const userId = localStorage.getItem('userId');
+
+    if (!userId) {
+      message.error('Please login before posting a product');
+      navigate('/login');
+      return;
+    }
+
     try {
       const response = await fetch('http://localhost:8083/product/post', {
         method: 'POST',
@@ -27,9 +37,9 @@ function Post() {
       }
 
       const data = await response.json();
-      setMessage(`Product listed successfully: ${data.product.title}`);
+      message.success(`Product listed successfully: ${data.product.title}`);
     } catch (error) {
-      setMessage(`There was a problem with the fetch operation: ${error.message}`);
+      message.error(`There was a problem with the fetch operation: ${error.message}`);
     }
   }
 
@@ -90,7 +100,6 @@ function Post() {
         <button type="submit">Register</button>
       </form>
       <br />
-      {message && <p className="message">{message}</p>}
       <a href="/">
         <button>Home</button>
       </a>
