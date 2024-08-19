@@ -3,7 +3,7 @@ const router = express.Router();
 const Product = require('../models/productModel.js');
 const adminMiddleware =  require('../middlewares/adminMiddleware.js');
 
-router.post('/approve',adminMiddleware , async (req, res) => {
+router.post('/approve', async (req, res) => {
     try {
         const { id } = req.body;
         
@@ -26,7 +26,7 @@ router.post('/approve',adminMiddleware , async (req, res) => {
     }
 });
 
-router.post('/reject', adminMiddleware , async (req, res) => {
+router.post('/reject', async (req, res) => {
     try {
         const { id } = req.body;
     
