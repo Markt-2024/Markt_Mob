@@ -1,8 +1,9 @@
 const express = require("express");
 const router = express.Router();
 const Product = require('../models/productModel.js');
+const adminMiddleware =  require('../middlewares/adminMiddleware.js');
 
-router.post('/approve', async (req, res) => {
+router.post('/approve',adminMiddleware , async (req, res) => {
     try {
         const { id } = req.body;
         
@@ -25,7 +26,7 @@ router.post('/approve', async (req, res) => {
     }
 });
 
-router.post('/reject', async (req, res) => {
+router.post('/reject', adminMiddleware , async (req, res) => {
     try {
         const { id } = req.body;
     
@@ -43,7 +44,7 @@ router.post('/reject', async (req, res) => {
     }
 });
 
-router.get('/all', async (req, res) => {
+router.get('/all', adminMiddleware , async (req, res) => {
     try {
         console.log('Fetching all unapproved products...');
         const products = await Product.find({ approved: false });
