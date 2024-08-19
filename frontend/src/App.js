@@ -19,7 +19,7 @@ function App() {
   useEffect(() => {
     async function fetchProducts() {
       try {
-        const response = await fetch('/product/all');
+        const response = await fetch(`https://markt-mob.vercel.app/product/all`);
         if (!response.ok) {
           throw new Error('Network response was not ok');
         }

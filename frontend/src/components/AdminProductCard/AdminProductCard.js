@@ -2,6 +2,8 @@ import React, { memo, useCallback } from 'react';
 import { Link } from 'react-router-dom';
 import './AdminProductCard.css';
 
+
+
 const AdminProductCard = memo(({ id, image, name, price, onApprove, onReject }) => {
 
     const handleApprove = useCallback(async (e) => {
@@ -10,7 +12,7 @@ const AdminProductCard = memo(({ id, image, name, price, onApprove, onReject }) 
         
         try {
             console.log("Approving product with id:", id); 
-            const response = await fetch('/admin/approve', {
+            const response = await fetch(`https://markt-mob.vercel.app/admin/approve`, {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',
@@ -36,7 +38,7 @@ const AdminProductCard = memo(({ id, image, name, price, onApprove, onReject }) 
         e.stopPropagation();
         
         try {
-            const response = await fetch('/admin/reject', {
+            const response = await fetch(`https://markt-mob.vercel.app/admin/reject`, {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',

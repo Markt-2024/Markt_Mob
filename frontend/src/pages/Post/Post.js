@@ -1,8 +1,10 @@
 import React, { useState } from 'react';
 import { useNavigate } from "react-router-dom";
 import { message } from "antd";
-
 import './Post.css';
+
+
+
 
 function Post() {
   const [title, setTitle] = useState('');
@@ -23,7 +25,7 @@ function Post() {
     }
 
     try {
-      const response = await fetch('/product/post', {
+      const response = await fetch(`https://markt-mob.vercel.app/product/post`, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',

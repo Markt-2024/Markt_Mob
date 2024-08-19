@@ -2,6 +2,8 @@ import React, { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
 import './ProductDetails.css';
 
+
+
 const ProductDetails = () => {
   const { id } = useParams();
   const [product, setProduct] = useState(null);
@@ -9,7 +11,7 @@ const ProductDetails = () => {
   useEffect(() => {
     const fetchProduct = async () => {
       try {
-        const response = await fetch(`/product/${id}`);
+        const response = await fetch(`https://markt-mob.vercel.app/product/${id}`);
         const data = await response.json();
         if (!response.ok) {
           throw new Error(data.msg || 'Product not found');

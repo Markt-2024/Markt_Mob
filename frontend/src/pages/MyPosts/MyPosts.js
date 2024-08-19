@@ -2,6 +2,8 @@ import React, { useEffect, useState } from 'react';
 import ProductListing from '../MyPosts/posts_Listing/ProductListing';
 import './MyPosts.css';
 
+
+
 export default function MyPosts() {
   const [products, setProducts] = useState([]);
   const [filteredProducts, setFilteredProducts] = useState([]);
@@ -12,7 +14,7 @@ export default function MyPosts() {
     async function fetchProducts() {
       try {
         const userId = localStorage.getItem('userId');
-        const response = await fetch(`/product/my-posts?userId=${userId}`, {
+        const response = await fetch(`https://markt-mob.vercel.app/product/my-posts?userId=${userId}`, {
           headers: {
             'Authorization': `Bearer ${localStorage.getItem('token')}`,
           },
@@ -52,7 +54,7 @@ export default function MyPosts() {
 
   const markAsSold = async (productId) => {
     try {
-      const response = await fetch(`/product/mark-as-sold/${productId}`, {
+      const response = await fetch(`https://markt-mob.vercel.app/product/mark-as-sold/${productId}`, {
         method: 'PATCH',
         headers: {
           'Content-Type': 'application/json',

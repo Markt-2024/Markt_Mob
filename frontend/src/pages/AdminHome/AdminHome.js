@@ -3,6 +3,8 @@ import { useNavigate } from 'react-router-dom';
 import ProductListing from '../../components/AdminProductListing/AdminProductListing';
 import './AdminHome.css';
 
+
+
 const AdminHome = () => {
   const [query, setQuery] = useState('');
   const [products, setProducts] = useState([]);
@@ -20,7 +22,7 @@ const AdminHome = () => {
       }
 
       try {
-        const response = await fetch('/admin/all', {
+        const response = await fetch(`https://markt-mob.vercel.app/admin/all`, {
           headers: {
             'Authorization': `Bearer ${token}`,
           },

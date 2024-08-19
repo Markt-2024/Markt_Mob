@@ -3,28 +3,29 @@ import { Button, Form, Input, message } from "antd";
 import { Link, useNavigate } from "react-router-dom";
 import './Login.css'
 import { LoginUser } from '../../calls/users';
-import { useAuth } from '../../components/authentication/AuthContext.js'; 
+import { useAuth } from '../../components/authentication/AuthContext.js';
 
 function Login() {
   const navigate = useNavigate()
-  const { login } = useAuth(); 
-
+  const { login } = useAuth();
   const onFinish = async (values) => {
-    console.log(values)
+    console.log(values);
     try {
       const response = await LoginUser(values);
-      if(response.success){
-        message.success(response.message)
-        login(response.token)
-        localStorage.setItem('userId', response.userId)
-        navigate('/')
+      console.log(response); // Debug the response
+      if (response.success) {
+        message.success(response.message);
+        login(response.token);
+        localStorage.setItem('userId', response.userId);
+        navigate('/');
       } else {
-        message.error(response.message)
+        message.error(response.message);
       }
     } catch (error) {
-      message.error(error.message)
+      console.error(error); // Debug the error
+      message.error('An unexpected error occurred');
     }
-  }
+  };
 
   return (
     <>

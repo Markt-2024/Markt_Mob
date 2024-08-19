@@ -1,34 +1,44 @@
-const {axiosInstance} = require('./index')
+const { axiosInstance } = require('./index');
 
-//Register new User
 
+// Register new User
 export const RegisterUser = async (value) => {
-    try{
-        const response = await axiosInstance.post("api/users/register", value);
+    try {
+        const response = await axiosInstance.post(`https://markt-mob.vercel.app/api/users/register`, value);
         return response.data;
-    }catch(error){
-        console.log(error);
-    }
-}
-
-
-// login user
-
-export const LoginUser = async (value) =>{
-    try {
-        const response = await axiosInstance.post("api/users/login", value);
-        return response.data
     } catch (error) {
-        console.log(error);
+        console.error(error);
+        return {
+            success: false,
+            message: error.response?.data?.message || 'An error occurred',
+        };
     }
-}
+};
 
-// get current user from the frontend
-export const GetCurrentUser = async () =>{
+// Login user
+export const LoginUser = async (value) => {
     try {
-        const response = await axiosInstance.get('api/users/get-current-user')
-        return response.data
+        const response = await axiosInstance.post(`https://markt-mob.vercel.app/api/users/login`, value);
+        return response.data;
     } catch (error) {
-       console.log(error)
+        console.error(error);
+        return {
+            success: false,
+            message: error.response?.data?.message || 'An error occurred',
+        };
     }
-}
+};
+
+// Get current user from the frontend
+export const GetCurrentUser = async () => {
+    try {
+        const response = await axiosInstance.get(`https://markt-mob.vercel.app/api/users/get-current-user`);
+        return response.data;
+    } catch (error) {
+        console.error(error);
+        return {
+            success: false,
+            message: error.response?.data?.message || 'An error occurred',
+        };
+    }
+};
