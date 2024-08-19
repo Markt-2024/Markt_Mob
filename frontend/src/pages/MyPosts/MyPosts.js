@@ -12,7 +12,7 @@ export default function MyPosts() {
     async function fetchProducts() {
       try {
         const userId = localStorage.getItem('userId');
-        const response = await fetch(`http://localhost:8083/product/my-posts?userId=${userId}`, {
+        const response = await fetch(`/product/my-posts?userId=${userId}`, {
           headers: {
             'Authorization': `Bearer ${localStorage.getItem('token')}`,
           },
@@ -52,7 +52,7 @@ export default function MyPosts() {
 
   const markAsSold = async (productId) => {
     try {
-      const response = await fetch(`http://localhost:8083/product/mark-as-sold/${productId}`, {
+      const response = await fetch(`/product/mark-as-sold/${productId}`, {
         method: 'PATCH',
         headers: {
           'Content-Type': 'application/json',

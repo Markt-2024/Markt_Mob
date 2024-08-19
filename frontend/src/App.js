@@ -19,7 +19,7 @@ function App() {
   useEffect(() => {
     async function fetchProducts() {
       try {
-        const response = await fetch('http://localhost:8083/product/all');
+        const response = await fetch('/product/all');
         if (!response.ok) {
           throw new Error('Network response was not ok');
         }

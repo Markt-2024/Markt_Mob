@@ -20,7 +20,7 @@ const AdminHome = () => {
       }
 
       try {
-        const response = await fetch('http://localhost:8083/admin/all', {
+        const response = await fetch('/admin/all', {
           headers: {
             'Authorization': `Bearer ${token}`,
           },

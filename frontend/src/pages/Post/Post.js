@@ -23,7 +23,7 @@ function Post() {
     }
 
     try {
-      const response = await fetch('http://localhost:8083/product/post', {
+      const response = await fetch('/product/post', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
