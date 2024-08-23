@@ -25,6 +25,14 @@ const SearchPage = () => {
     fetchProducts();
   }, []);
 
+  if (!products) {
+    return (
+      <div className="product-details-page product-not-found">
+        <div className="loading-circle"></div>
+      </div>
+    );
+  }
+
   const handleSearch = (e) => {
     setQuery(e.target.value);
   };

@@ -1,0 +1,28 @@
+.listing{
+    margin: -1.5%;
+}
+
+@media screen and (max-width: 1200px) {
+    .listing{
+        margin: -3%;
+    }
+}
+
+@media screen and (max-width: 992px) {
+    .listing{
+        margin: -3%;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .listing{
+        margin: -4%;
+    }
+}
+
+@media screen and (max-width: 576px) {
+    .listing{
+        margin: -5%;
+    }
+}
+

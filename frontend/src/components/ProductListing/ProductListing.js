@@ -3,7 +3,7 @@ import './ProductListing.css';
 
 const ProductListing = ({products}) => {
       return (
-        <div style={{ display: 'flex', flexWrap: 'wrap', justifyContent: 'center' }}>
+        <div className='listing' style={{ display: 'flex', flexWrap: 'wrap', justifyContent: 'center' }}>
           {products.map((product,index) => (
             <ProductCard
               key={index}
