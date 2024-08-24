@@ -1,78 +1,72 @@
-/* PostProduct.css */
-
+/* Basic styling for the Post component container */
 .Post {
-    max-width: 600px;
-    margin: 50px auto;
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    background-color: #fff;
-  }
-  
-  .Post h1 {
-    text-align: center;
-    margin-bottom: 20px;
-    color: #333;
-  }
-  
-  .Post form {
-    display: flex;
-    flex-direction: column;
-  }
-  
-  .Post label {
-    margin-bottom: 15px;
-    color: #555;
-    font-weight: bold;
-  }
-  
-  .Post input[type="text"],
-  .Post input[type="number"] {
-    width: 100%;
-    padding: 10px;
-    margin-top: 5px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    box-sizing: border-box;
-  }
-  
-  .Post input[type="text"]:focus,
-  .Post input[type="number"]:focus {
-    outline: none;
-    border-color: #007bff;
-  }
-  
-  .Post button[type="submit"] {
-    background-color: #007bff;
-    color: white;
-    padding: 10px;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    font-size: 16px;
-    margin-top: 20px;
-  }
-  
-  .Post button[type="submit"]:hover {
-    background-color: #0056b3;
-  }
-  
-  .Post button a {
-    color: white;
-    text-decoration: none;
-  }
-  
-  .Post button {
-    margin-top: 20px;
-    padding: 10px;
-    background-color: #6c757d;
-    color: white;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    font-size: 16px;
-  }
-  
-  .Post button:hover {
-    background-color: #5a6268;
-  }
+  max-width: 600px; /* Limit the width of the form */
+  margin: 0 auto; /* Center the form horizontally */
+  padding: 20px; /* Add padding around the form */
+  background-color: #f9f9f9; /* Light background color */
+  border-radius: 8px; /* Rounded corners */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+}
+
+/* Styling for the form heading */
+.Post h1 {
+  font-size: 24px; /* Larger font size for the heading */
+  color: #333; /* Dark color for text */
+  text-align: center; /* Center the heading */
+  margin-bottom: 20px; /* Space below the heading */
+}
+
+/* Styling for form labels */
+.Post label {
+  display: block; /* Block display for labels */
+  margin-bottom: 8px; /* Space below each label */
+  font-weight: bold; /* Make labels bold */
+  color: #555; /* Slightly darker color for labels */
+}
+
+/* Styling for form inputs */
+.Post input {
+  width: 100%; /* Full width inputs */
+  padding: 8px; /* Padding inside inputs */
+  margin-bottom: 16px; /* Space between inputs */
+  border: 1px solid #ddd; /* Light border for inputs */
+  border-radius: 4px; /* Rounded corners for inputs */
+  box-sizing: border-box; /* Include padding and border in element's total width and height */
+}
+
+/* Styling for the submit button */
+.Post button[type="submit"] {
+  width: 100%; /* Full width button */
+  padding: 10px; /* Padding inside button */
+  background-color: #1890ff; /* Primary button background color */
+  border: none; /* Remove default border */
+  border-radius: 4px; /* Rounded corners */
+  color: white; /* White text color */
+  font-size: 16px; /* Font size for button text */
+  cursor: pointer; /* Pointer cursor on hover */
+  transition: background-color 0.3s ease; /* Smooth background color transition */
+}
+
+/* Styling for the submit button on hover */
+.Post button[type="submit"]:hover {
+  background-color: #40a9ff; /* Slightly lighter color on hover */
+}
+
+/* Styling for the home button */
+.Post a button {
+  width: 100%; /* Full width button */
+  padding: 10px; /* Padding inside button */
+  background-color: #f0f0f0; /* Light background color */
+  border: 1px solid #ddd; /* Border around the button */
+  border-radius: 4px; /* Rounded corners */
+  color: #333; /* Dark text color */
+  font-size: 16px; /* Font size for button text */
+  cursor: pointer; /* Pointer cursor on hover */
+  transition: background-color 0.3s ease, color 0.3s ease; /* Smooth transitions */
+}
+
+/* Styling for the home button on hover */
+.Post a button:hover {
+  background-color: #e0e0e0; /* Slightly darker background color on hover */
+  color: #000; /* Darker text color on hover */
+}

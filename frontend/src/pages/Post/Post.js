@@ -3,9 +3,6 @@ import { useNavigate } from "react-router-dom";
 import { message } from "antd";
 import './Post.css';
 
-
-
-
 function Post() {
   const [title, setTitle] = useState('');
   const [image, setImage] = useState('');
@@ -99,12 +96,9 @@ function Post() {
           />
         </label>
         <br />
-        <button type="submit">Register</button>
+        <button type="submit">Post</button>
       </form>
       <br />
-      <a href="/">
-        <button>Home</button>
-      </a>
     </div>
   );
 }
