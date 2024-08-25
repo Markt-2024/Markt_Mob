@@ -38,7 +38,7 @@ export default function CustomHeader() {
     <Header className="custom-header">
       <div className="logo">
         <Link to={`/`}>
-          <img  src="https://i.ibb.co/h1T1hzk/logo-color.png" alt="Markt Logo" />
+          <img  src="https://i.ibb.co/rK9Bymv/markt-high-resolution-logo-white-transparent.png" alt="Markt Logo" />
         </Link> 
       </div>
       <Menu className="menu" theme="dark" mode="horizontal" defaultSelectedKeys={['1']}>

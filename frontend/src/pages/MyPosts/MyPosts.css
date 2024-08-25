@@ -20,7 +20,7 @@
 .MyPosts h1 {
   font-size: 2em;
   margin-bottom: 20px;
-  color: var(--primary-color);
+  color:black;
 }
 
 .filters {

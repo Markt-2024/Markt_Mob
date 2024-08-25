@@ -31,6 +31,7 @@ const AdminProductCard = memo(({ id, image, name, price, onApprove, onReject }) 
             console.error('Error approving product:', error);
             // Handle error, e.g., show an error message to the user
         }
+        window.location.reload();
     }, [id, onApprove]);
     
     const handleReject = useCallback(async (e) => {
@@ -57,6 +58,7 @@ const AdminProductCard = memo(({ id, image, name, price, onApprove, onReject }) 
             console.error('Error rejecting product:', error);
             // Handle error
         }
+        window.location.reload();
     }, [id, onReject]);
 
     return (

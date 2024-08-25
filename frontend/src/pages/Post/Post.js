@@ -37,6 +37,7 @@ function Post() {
 
       const data = await response.json();
       message.success(`Product listed successfully: ${data.product.title}`);
+      navigate('/');
     } catch (error) {
       message.error(`There was a problem with the fetch operation: ${error.message}`);
     }
