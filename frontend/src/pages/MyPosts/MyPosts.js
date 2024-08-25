@@ -78,7 +78,7 @@ export default function MyPosts() {
 
   return (
     <div className="MyPosts">
-      <h1>My Posts</h1>
+      <h1>Your Posts</h1>
       {message && <p className="message">{message}</p>}
       <div className="filters">
         <button

@@ -32,10 +32,10 @@ const ProductDetails = () => {
     <div className="product-details-page">
       <div className="product-details">
         <div className="product-image">
-          <img src={product.image} alt={product.name} />
+          <img src={product.image} alt={product.title} />
         </div>
         <div className="product-info">
-          <h2 className="product-name">{product.name}</h2>
+          <h2 className="product-name">{product.title}</h2>
           <p className="product-description">{product.description}</p>
           <p className="product-price">Price: {product.price}</p>
           <p className="product-seller">Seller: {product.contact}</p>

@@ -14,6 +14,16 @@
   color: white; /* Default text color */
 }
 
+.logo{
+  height: 62px;
+  width: 120px;
+  border-radius: 10px;
+}
+.logo img{
+  height: 100%;
+  width: 100%;
+  border-radius: 10px;
+}
 .custom-header .logo h1 {
   margin: 0; /* Remove default margin */
   font-size: 40px; /* Font size for the logo */
@@ -73,6 +83,7 @@
   }
 
   .custom-header .login-button {
-    margin-top: 8px; /* Space above the login button on mobile */
+    margin-top: 2px; /* Space above the login button on mobile */
+    margin-left: 2px; /* Space to the left of the login button on mobile */
   }
 }

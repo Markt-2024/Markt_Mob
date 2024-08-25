@@ -11,6 +11,7 @@ import { useEffect, useState } from 'react';
 import Post from './pages/Post/Post.js';
 import AdminHome from './pages/AdminHome/AdminHome.js';
 import MyPosts  from './pages/MyPosts/MyPosts.js';
+import AboutUs from './pages/About/About.js';
 
 
 function App() {
@@ -46,6 +47,7 @@ function App() {
           <Route path="/product/:id" element={<ProductDetails products={products} />} />
           <Route path="/admin" element={<AdminHome/>} />
           <Route path="/my-posts" element={<MyPosts/>} />
+          <Route path="/about" element={<AboutUs/>} />
         </Routes>
       </Router>
     </AuthProvider>

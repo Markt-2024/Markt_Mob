@@ -1,65 +1,89 @@
-.MyPosts{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin-top: 20px;
+:root {
+  --primary-color: #007bff;
+  --secondary-color: #6c757d;
+  --accent-color: #28a745;
+  --background-color: #f8f9fa;
+  --text-color: #343a40;
+  --border-color: #dee2e6;
+  --message-bg-color: #d4edda;
+  --message-text-color: #155724;
+}
+
+.MyPosts {
+  padding: 20px;
+  background-color: var(--background-color);
+  color: var(--text-color);
+  font-family: 'Arial', sans-serif;
+  text-align: center;
+}
+
+.MyPosts h1 {
+  font-size: 2em;
+  margin-bottom: 20px;
+  color: var(--primary-color);
 }
 
 .filters {
-    display: flex;
-    justify-content: center;
-    margin: 20px 0;
+  display: inline-flex;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.filters button {
+  padding: 10px 20px;
+  border: 2px solid var(--border-color);
+  background-color: var(--background-color);
+  color: var(--text-color);
+  cursor: pointer;
+  transition: background-color 0.3s, color 0.3s, transform 0.2s;
+  border-radius: 0; /* Default border radius for middle buttons */
+  font-size: 1em;
+}
+
+.filters button:first-child {
+  border-radius: 20px 0 0 20px; /* Rounded borders for the first button */
+}
+
+.filters button:last-child {
+  border-radius: 0 20px 20px 0; /* Rounded borders for the last button */
+}
+
+.filters button.active,
+.filters button:hover {
+  background-color: var(--primary-color);
+  color: #fff;
+  transform: scale(1.05); /* Slight zoom on hover/active */
+}
+
+.filters button:active {
+  transform: scale(0.95); /* Slight shrink on click */
+}
+
+.message {
+  padding: 10px 15px;
+  background-color: var(--message-bg-color);
+  color: var(--message-text-color);
+  border-radius: 5px;
+  margin-bottom: 20px;
+}
+
+@media (max-width: 768px) {
+  .MyPosts {
+    font-size:16px ;
+    padding:10px;
   }
-  
+
+  .filters {
+    align-items: center;
+  }
+
   .filters button {
-    background-color: #f8f9fa;
-    border: 1px solid #dee2e6;
-    color: #495057;
-    cursor: pointer;
-    font-size: 16px;
-    padding: 10px 20px;
-    transition: all 0.3s ease;
+    height: 60px;
+    width: 70%;
+    margin-bottom: 10px; /* Full rounded corners on mobile */
   }
-  
-  .filters button:first-child {
-    border-radius: 20px 0 0 20px;
+
+  .MyPosts h1 {
+    font-size: 1.5em;
   }
-  
-  .filters button:last-child {
-    border-radius: 0 20px 20px 0;
-  }
-  
-  .filters button:not(:last-child) {
-    border-right: none;
-  }
-  
-  .filters button:hover {
-    background-color: #e9ecef;
-  }
-  
-  .filters button.active {
-    background-color: #007bff;
-    color: white;
-    border-color: #007bff;
-  }
-  
-  .filters button.active:hover {
-    background-color: #0056b3;
-  }
-  
-  @media (max-width: 600px) {
-    .filters {
-      flex-direction: column;
-      align-items: center;
-    }
-  
-    .filters button {
-      width: 80%;
-      margin: 5px 0;
-      border-radius: 20px;
-    }
-  
-    .filters button:not(:last-child) {
-      border-right: 1px solid #dee2e6;
-    }
-  }
+}

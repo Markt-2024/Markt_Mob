@@ -1,100 +1,108 @@
+/* ProductDetails.css */
+
 .product-details-page {
-  max-width: 1200px;
-  margin: 0 auto;
   padding: 20px;
-  font-family: Arial, sans-serif;
-  background-color: #f8f8f8;
+  max-width: 1200px; /* Max width for large screens */
+  margin: 0 auto;
+  background-color: #f9f9f9; /* Light background for the page */
+}
+
+.product-details {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px; /* Space between image and info */
+  background-color: #fff; /* White background for the product details */
+  border-radius: 8px; /* Rounded corners */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+  padding: 20px; /* Padding inside the card */
+}
+
+/* Mobile-first styles */
+.product-image {
+  flex: 1; /* Flex-grow to take available space */
+  max-width: 40%; /* Ensure image doesn't overflow */
+}
+
+.product-image img {
+  width: 100%; /* Full width of the container */
+  height: auto; /* Maintain aspect ratio */
+  border-radius: 8px; /* Rounded corners for image */
+}
+
+.product-info {
+  flex: 2; /* Flex-grow to take available space */
   display: flex;
   flex-direction: column;
-  height: 100vh; /* Full viewport height */
+  justify-content: space-between; /* Space out the content */
+}
+
+.product-name {
+  font-size: 1.5rem; /* Adjust font size for smaller screens */
+  margin: 0;
+  color: #333; /* Dark color for text */
+}
+
+.product-description {
+  font-size: 0.9rem; /* Adjust font size for smaller screens */
+  color: #555; /* Slightly lighter color for description */
+  margin: 10px 0;
+}
+
+.product-price {
+  font-size: 1.1rem; /* Adjust font size for smaller screens */
+  font-weight: bold; /* Bold font for emphasis */
+  color: #e74c3c; /* Distinct color for price */
+  margin: 10px 0;
+}
+
+.product-seller {
+  font-size: 0.9rem; /* Adjust font size for smaller screens */
+  color: #666; /* Lighter color for seller info */
+}
+
+/* Media query for tablets and small devices */
+@media (max-width: 768px) {
+  .product-details {
+    flex-direction: column; /* Stack image and info vertically */
+    align-items: center; /* Center-align content */
+  }
+
+  .product-image {
+    max-width: 60%;
+    margin: 10%; /* Ensure image fits well on smaller screens */
+  }
+
+  .product-info {
+    text-align: center; /* Center-align text */
+  }
+}
+
+/* Media query for mobile devices */
+@media (max-width: 480px) {
+  .product-name {
+    font-size: 1.2rem; /* Further adjust font size */
+  }
+
+  .product-description {
+    font-size: 0.8rem; /* Further adjust font size */
+  }
+
+  .product-price {
+    font-size: 1rem; /* Further adjust font size */
+  }
+
+  .product-seller {
+    font-size: 0.8rem; /* Further adjust font size */
+  }
+
+  .product-details {
+    padding: 10px; /* Reduce padding for smaller screens */
+  }
 }
 
 .product-not-found {
   text-align: center;
-  font-size: 24px;
-  color: #d9534f;
-  padding: 50px;
-}
-
-.product-details {
-  flex: 1;
-  display: flex;
-  flex-direction: column;
-  background-color: #ffffff;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-}
-
-.product-image {
-  flex: 1;
-  text-align: center;
-  padding: 20px;
-  max-height: 50%; /* Ensures the image takes up the upper half */
-  overflow: hidden;
-}
-
-.product-image img {
-  max-width: 100%;
-  height: 100%;
-  object-fit: contain;
-}
-
-.product-info {
-  flex: 1;
-  padding: 20px;
-  border-top: 1px solid #ddd;
-  overflow-y: auto; /* Allows scrolling if content overflows */
-}
-
-.product-name {
-  font-size: 28px;
-  font-weight: bold;
-  color: #333;
-}
-
-.product-description {
-  margin-top: 20px;
-  font-size: 16px;
-  line-height: 1.6;
-  color: #666;
-}
-
-.product-price {
-  margin-top: 20px;
-  font-size: 22px;
-  font-weight: bold;
-  color: #b12704;
-}
-
-.product-seller {
-  margin-top: 20px;
-  font-size: 16px;
-  color: #555;
-}
-
-@media (max-width: 768px) {
-  .product-details {
-    flex-direction: column;
-  }
-
-  .product-image {
-    max-height: 40%;
-    padding: 10px;
-  }
-
-  .product-info {
-    padding: 10px;
-  }
-
-  .product-name {
-    font-size: 24px;
-  }
-
-  .product-price {
-    font-size: 20px;
-  }
-
-  .product-description,
-  .product-seller {
-    font-size: 14px;
-  }
+  padding: 100px 20px;
+  font-size: 1.5rem;
+  color: #e74c3c; /* Error color */
 }

@@ -43,6 +43,7 @@ function Post() {
   }
 
   return (
+    <div className="PostW">
     <div className="Post">
       <h1>Post</h1>
       <form onSubmit={registerUser}>
@@ -99,6 +100,7 @@ function Post() {
         <button type="submit">Post</button>
       </form>
       <br />
+    </div>
     </div>
   );
 }
